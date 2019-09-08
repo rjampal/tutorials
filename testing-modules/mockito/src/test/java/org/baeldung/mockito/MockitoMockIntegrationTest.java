@@ -1,6 +1,9 @@
 package org.baeldung.mockito;
 
 import static org.mockito.Mockito.*;
+
+import org.baeldung.mockito.voidmethods.MyList;
+
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.containsString;
@@ -24,7 +27,7 @@ public class MockitoMockIntegrationTest {
     }
 
     @Rule
-    private ExpectedException thrown = ExpectedException.none();
+    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void whenUsingSimpleMock_thenCorrect() {
